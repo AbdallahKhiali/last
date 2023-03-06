@@ -1,0 +1,137 @@
+.gymstore {
+    min-height: fit-content;
+    padding: 1.75rem 0;
+    overflow: hidden;
+
+    @media (max-width:768px) {
+        padding: 1.5rem 0;
+
+    }
+
+    .gymstore_label,
+    .gymstore_categorie {
+        text-align: center;
+        margin: 1rem;
+
+
+        @media (max-width:768px) {
+            text-align: start;
+        }
+
+
+    }
+
+    .gymstore_label {
+        font-size: 36px;
+        line-height: 32px;
+        letter-spacing: 1px;
+        font-weight: bolder;
+
+        @media (max-width:768px) {
+            line-height: 36px;
+            font-size: 24px;
+        }
+
+
+        @media (max-width:435px) {
+
+            // padding: 0 1rem;
+            letter-spacing: 0.01em;
+
+       
+            font-family: 'Epilogue';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 39px;
+            /* identical to box height, or 157% */
+
+
+            /* Black */
+
+            color: #000000;
+
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+
+    }
+
+    .gymstore_content {
+        padding: 2rem;
+
+        position: relative;
+
+        @media (max-width:768px) {
+            padding: 0;
+            margin: 0;
+        }
+
+
+
+
+        .gymstore_content_products {
+            display: grid;
+            padding: 2.5rem;
+            grid-template-columns: repeat(3, minmax(325px, 350px));
+            grid-template-rows: repeat(1, 1fr);
+            position: relative;
+            gap: 3rem;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+
+            .no-data {
+                text-align: center;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            @media (max-width:768px) {
+                padding: 3.5rem 0.5rem;
+                justify-content: flex-start;
+                gap: 0.5rem;
+                grid-template-columns: repeat(2, 1fr);
+                width: 100%;
+                max-height: 435px;
+                // padding-left: 1rem;
+
+            }
+
+            @media (max-width: 600px) {
+                // width: 342.94px !important;
+                // grid-template-columns: repeat(2, 1fr);
+                height: 305px !important;
+
+
+
+            }
+
+
+            .gymstore_content_next {
+
+                position: absolute;
+                right: 18vw;
+                text-align: center;
+                top: -15px;
+
+                @media (max-width:768px) {
+                    right: 15px;
+                    top: 0px;
+                }
+
+                img {
+                    height: 24px;
+                    width: 64px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,418 @@
+.coachinfo {
+    height: fit-content;
+
+    .coachinfo-inner {
+        padding-top: 5rem;
+        min-height: 100vh;
+        height: fit-content;
+        width: 100%;
+        background-color: #000;
+        border-bottom-left-radius: 120px;
+        border-bottom-right-radius: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        color: white;
+        overflow: hidden;
+
+
+        @media (max-width: 768px) {
+            height: fit-content;
+            min-height: fit-content;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            padding-top: 12vh;
+        }
+
+        @media (max-width:435px) {
+            height: 435px;
+            padding-bottom: 2rem;
+        }
+
+        .coachinfo-inner-typo {
+            margin: 0.5rem;
+
+
+
+            @media (max-width: 768px) {
+                text-align: center;
+                font-size: 24px;
+                padding: 1rem;
+                width: fit-content;
+            }
+
+            .coachinfo-inner-hero-label {
+                padding: 0.5rem 2rem;
+                border-bottom: 2px solid #fff;
+                text-transform: uppercase;
+                font-size: 24px;
+                text-align: center;
+                margin-bottom: 0.5rem;
+
+                @media (max-width: 768px) {
+                    font-size: 18px;
+                }
+            }
+
+
+
+            .coachinfo-inner-hero-name {
+                padding: 0.5rem;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+
+        .coachinfo-inner-hero-gallery {
+            height: 70vh;
+            min-width: 100%;
+            overflow: hidden;
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+
+            position: relative;
+
+            @media (max-width: 768px) {
+                width: fit-content;
+                height: 50vh;
+            }
+
+            @media (max-width:435px) {
+                height: 128px;
+            }
+
+            img {
+                margin: 0 1rem;
+                height: 80%;
+
+                min-width: 50vw;
+                width: 100%;
+                // overflow: hidden;
+                border-radius: 25px;
+
+                @media (max-width:768px) {
+                    width: 200px;
+                    height: 275px;
+                }
+
+                @media (max-width:435px) {
+                    height: 128px;
+                }
+
+
+
+                &:not(&:nth-child(2)) {
+                    height: 50%;
+
+                    @media (max-width:435px) {
+                        height: 96px;
+                    }
+                }
+
+                &:nth-child(3) {
+                    // overflow: hidden;
+                    object-position: left;
+                    object-fit: contain;
+                    position: relative;
+                    left: 100px;
+
+                    @media (max-width:768px) {
+                        position: relative;
+                        left: -25px;
+                    }
+                }
+
+                &:nth-child(1) {
+                    object-position: right;
+                    object-fit: contain;
+                    position: relative;
+                    left: -100px;
+
+                    @media (max-width:768px) {
+                        position: relative;
+                        left: 25px;
+                    }
+
+                }
+            }
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 26px;
+                height: 150%;
+                left: 20%;
+                top: 50%;
+
+                background-color: black;
+
+                transform: scaleX(5) translateY(-50%);
+                filter: blur(5px);
+                z-index: 99;
+            }
+
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 26px;
+                height: 150%;
+                right: 20%;
+                top: 50%;
+                background-color: black;
+
+                transform: scaleX(5) translateY(-50%);
+                filter: blur(5px);
+                z-index: 99;
+
+            }
+
+        }
+    }
+
+    .coachinfo-about {
+
+        padding: 2rem;
+
+        height: fit-content;
+
+        @media (max-width:768px) {
+            padding: 1rem;
+
+        }
+
+        .coachinfo-about-quote {
+            text-align: center;
+            margin: 5rem 2rem;
+            padding: 1rem;
+            font-size: 32px;
+            font-weight: 400;
+
+            @media (max-width:768px) {
+                padding: 0;
+                font-size: 16px;
+                margin: 2rem auto;
+                width: 100%;
+                line-height: 24px;
+                letter-spacing: 0.01em;
+                font-style: normal;
+
+            }
+        }
+
+        .coachinfo-about-info {
+            height: 75vh;
+            padding: 1rem;
+            width: 100%;
+            max-height: 500px;
+            display: flex;
+            justify-content: center;
+            margin-top: 2.5rem;
+
+            @media (max-width:768px) {
+                max-height: none;
+                height: 100%;
+                width: 100%;
+                padding: 0;
+                flex-direction: column;
+                margin: 0;
+            }
+
+            .coachinfo-about-thumbnail {
+                height: 100%;
+                width: 650px;
+                border-radius: 25px;
+                background: linear-gradient(-224.64deg, #FF7575 7.66%, #FFA551 73.82%);
+                background-position: center;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                position: relative;
+                overflow: hidden;
+                min-width: 350px;
+
+                @media (max-width:768px) {
+
+                    height: 60vh;
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .coachinfo-about-thumbnail-img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                    // height: 100%;
+                    width: 85%;
+                    object-fit: contain;
+
+
+                    @media (max-width:768px) {
+                        width: 100%;
+                    }
+
+                }
+
+                .coachinfo-about-info-img {
+                    height: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 2;
+
+                }
+
+
+                .bg-design {
+                    height: fit-content;
+                    width: 100%;
+                    object-fit: contain;
+                }
+
+            }
+
+            .coach-bg-women {
+                background: linear-gradient(224.21deg, #82D4FF -0.2%, #61F4DE 87.09%);
+            }
+
+            .coachinfo-about-info-typo {
+                padding: 1rem 3rem;
+                display: flex;
+                flex-direction: column;
+
+                @media (max-width:768px) {
+                    height: fit-content;
+                    width: 100%;
+                    padding: 0.5rem 0;
+                    margin: 0.5rem 0;
+                }
+
+                .coachinfo-about-label {
+                    font-weight: bold;
+                    font-style: normal;
+
+                }
+
+                .coachinfo-about-description {
+                    // width: fit-content;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 20px;
+                    padding: 1rem 0;
+                    line-height: 32px;
+                    width: 625px;
+
+
+
+                    @media (max-width:1024px) {
+                        margin: 0;
+                        width: 100%;
+                        width: 100%;
+                        padding: 0.5rem 0;
+                    }
+
+                    @media (max-width:600px) {
+                        line-height: 24px;
+                        font-size: 16px;
+                        font-weight: 400;
+                        letter-spacing: 0.01em;
+                        width: 350px;
+                    }
+
+
+                }
+
+                .coachinfo-about-awards {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    padding: 0.5rem 0;
+                    font-size: 24px;
+
+                    @media (max-width:768px) {
+                        font-size: 20px;
+                    }
+
+                    img {
+                        height: 48px;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+
+    .workout-program {
+        @media (max-width:768px) {
+            padding: 1rem;
+
+        }
+
+        .workout-program-label {
+            text-align: center;
+            font-size: 36px;
+            margin: 2rem;
+            font-weight: 900;
+
+            @media (max-width:768px) {
+                text-align: center;
+                font-size: 24px;
+                padding: 0.5rem 0;
+                margin: 0.5rem 0;
+
+                &:nth-child(1) {
+                    text-align: start;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+
+        .workout-program-description {
+            padding: 0rem 0;
+            line-height: 32px;
+            text-align: center;
+            width: 750px;
+            margin: 0 auto;
+
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            line-height: 42px;
+
+            @media (max-width:768px) {
+                width: 100%;
+                padding: 0.5rem 0;
+                margin: 1rem 0;
+                text-align: start;
+                font-size: 18px;
+                line-height: 36px;
+                line-height: 28px;
+
+            }
+        }
+
+
+        .workout-program-offers {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+
+
+            @media (max-width:768px) {
+                padding: 0rem;
+                flex-direction: column;
+            }
+        }
+    }
+}

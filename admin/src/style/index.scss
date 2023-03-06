@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Amiri+Quran&family=Cairo&family=Dancing+Script&family=Inter&family=Poppins:ital,wght@1,300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+::-webkit-scrollbar {
+  height: 100%;
+  width: 12px;
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  width: 100%;
+}
+
+
+.dashboard {
+  min-height: 100vh;
+  // background-color: #131313;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  padding-right: 1rem;
+  position: relative;
+
+}
+
+// .row {
+//   padding: 0 !important;
+//   margin: 0 !important;
+// }
+
+.add_button {
+  all: unset;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: white;
+  color: #000;
+
+}
+
+.update-product-img {
+  height: 224px;
+  border-radius: 8px;
+  margin: 0.25rem 1rem;
+  background-color: #fefefe;
+  object-fit: contain;
+}

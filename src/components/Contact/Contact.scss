@@ -1,0 +1,148 @@
+.contact {
+    min-height: 100vh;
+    height: fit-content;
+    background-color: #E6FF0080;
+    display: flex;
+
+    @media (max-width:768px) {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .header-container {
+        @media (min-width:1024px) {
+            display: none;
+        }
+    }
+
+    .contact-thumbnail {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+
+        @media (max-width:768px) {
+            width: 100%;
+            // align-items: start;
+            flex-direction: column;
+            height: 425px;
+            max-height: 600px;
+            padding: 1rem;
+            justify-content: end;
+            text-align: center;
+
+        }
+
+        .contact-logo {
+            height: 150px;
+            width: 250px;
+            object-fit: contain;
+
+            @media (max-width:425px) {
+                display: none;
+            }
+        }
+
+        .contact-typo {
+            color: #ccc;
+            width: 75%;
+            margin-top: 4rem;
+            line-height: 24px;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 400;
+
+
+            @media (max-width:768px) {
+                font-size: 14px;
+                width: 90%;
+                text-align: start;
+            }
+
+
+        }
+    }
+
+
+    .contact-form-wrapper {
+        height: 100%;
+        width: 40%;
+        padding: 8rem 5rem 0 5rem;
+        max-width: 700px;
+
+        @media (max-width:768px) {
+            width: 100%;
+            padding: 2rem;
+            height: fit-content;
+            justify-content: end;
+
+        }
+
+        .contact-form-label {
+            text-transform: uppercase;
+            font-size: 24px;
+            width: fit-content;
+            font-weight: bold;
+
+        }
+
+        .contact-form-inner {
+            margin: 2rem 0rem;
+
+            .contact-form-content {
+                display: flex;
+                flex-direction: column;
+                margin: 1rem 0;
+
+                .form-control {
+                    outline: none;
+                    width: 100%;
+                    border-radius: 10px;
+                    border: 1px solid #000;
+                    height: 45px;
+                    margin: 0.5rem 0;
+                    padding-left: 15px;
+                    background-color: transparent;
+                }
+
+                .contact-textarea {
+                    height: 200px;
+                    resize: none;
+                    padding: 1rem;
+                }
+
+                p {
+                    opacity: 0.5;
+                    line-height: 32px;
+
+                    @media (max-width:768px) {
+                        font-size: 12px;
+                    }
+                }
+
+
+
+            }
+
+            .contact-form-btn {
+                background-color: #000;
+                height: 45px;
+                width: 100%;
+                // max-width: 350px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #E6FF00;
+                gap: 0.5rem;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
+    }
+}

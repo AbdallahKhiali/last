@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@1,300&display=swap');
+
+
+@font-face {
+  font-family: "Epilogue";
+  src: url(font/OTF/Epilogue-Regular.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  font-family: 'Epilogue';
+  font-style: normal;
+
+}

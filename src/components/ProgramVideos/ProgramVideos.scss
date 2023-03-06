@@ -1,0 +1,131 @@
+.programvideos {
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    position: relative;
+
+
+    .password_modal {
+        background-color: #eee;
+        height: 50vh;
+        width: 450px;
+        z-index: 9999999999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 12px;
+
+        @media (max-width:600px) {
+            width: 90%;
+        }
+
+        input {
+            width: 400px;
+
+            @media (max-width:600px) {
+                width: 280px;
+            }
+        }
+
+
+        .close_password_modal {
+            background-color: #FFB00D;
+            position: absolute;
+            height: 36px;
+            right: 6px;
+            top: 6px;
+            border-radius: 8px;
+            width: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+
+        }
+
+        .header_modal {
+            margin: 12px 0;
+
+            @media (max-width:600px) {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width:768px) {
+        padding: 0.5rem;
+        padding-top: 100px;
+    }
+
+    .coach-label {
+        width: fit-content;
+        padding: 0 2rem;
+        margin: 0 2rem;
+
+        @media (max-width:768px) {
+            padding: 0.5rem 1rem;
+            font-size: 1.5rem;
+            margin: 1.5rem 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .programvideos-inner {
+        padding: 0.5rem 2rem 2rem 2.5rem;
+        // grid-row-gap: 1rem;
+        grid-column-gap: 0.5rem;
+        width: 100%;
+        overflow-x: hidden;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        // grid-template-rows: repeat(auto-fill, 1fr);
+
+
+
+        // background-color: #E6FF00;
+        // background-color: #101010;
+
+        // background-image: url("../../img/bodyetic.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50vh;
+
+        @media (max-width:768px) {
+            padding: 0;
+            gap: 8px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(auto-fill, 1fr);
+            // background-color: rebeccapurple;
+            justify-content: center;
+        }
+
+
+
+    }
+
+}
+
+.login-form-btn {
+    background-color: #000;
+    height: 45px;
+    width: 400px;
+    margin-top: 8px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    gap: 0.5rem;
+    cursor: pointer;
+
+    @media (max-width:600px) {
+        width: 280px;
+    }
+}

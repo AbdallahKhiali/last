@@ -1,0 +1,161 @@
+.bodyeticwarriors {
+
+    height: fit-content;
+    padding: 3.5rem;
+    font-family: 'Epilogue';
+    font-style: normal;
+
+    @media (max-width:768px) {
+        padding: 1rem;
+    }
+
+
+    .bodyeticwarriors-inner {
+        height: 70vh;
+        max-height: 900px;
+        background-color: black;
+        border-radius: 50px;
+        color: white;
+        overflow: hidden;
+        width: 95%;
+        display: flex;
+        margin: 0 auto;
+
+
+        @media (max-width:768px) {
+            flex-direction: column;
+            margin: 0;
+            padding: 1rem 1rem 0 1rem;
+            height: 60vh;
+
+            border-radius: 20px;
+            width: 100%;
+
+        }
+
+        @media (max-width:768px) {
+            height: 450px;
+            padding-top: 2rem;
+        }
+
+        .bodyeticwarriors-typo {
+            width: 30%;
+            padding-left: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+            @media (max-width:768px) {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                padding-left: 2rem;
+            }
+
+            .bodyeticwarriors-hashtag {
+                font-size: 28px;
+                margin: 0.5rem 0;
+                letter-spacing: 2px;
+                position: relative;
+                top: -56px;
+
+                @media (max-width:600px) {
+                    position: relative;
+                    top: 0;
+                    letter-spacing: 0;
+                    margin: 0;
+                    font-size: 24px;
+                }
+
+            }
+
+
+            .bodyeticwarriors-description {
+                position: relative;
+                top: -56px;
+
+                @media (max-width:768px) {
+                    font-size: 11px;
+                    width: 100%;
+                    margin-top: 0.5rem;
+                    color: #ccc;
+                    position: relative;
+                    top: -36px;
+                }
+
+                @media (max-width:600px) {
+                    position: relative;
+                    top: 0;
+                }
+            }
+
+            .bodyeticwarriors-definition {
+                margin: 2rem 0;
+                width: 75%;
+                line-height: 48px;
+                font-size: 36px;
+
+                @media (max-width:768px) {
+                    margin: 2rem 0 0.5rem 0;
+                    width: 100%;
+                    line-height: 36px;
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .bodyeticwarriors-images {
+            width: 60%;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+
+            @media (max-width:768px) {
+                width: 100%;
+                align-items: flex-end;
+                height: 60%;
+                object-position: bottom;
+                position: relative;
+                top: 25px;
+
+            }
+
+            .men {
+
+                bottom: 0;
+                height: 100%;
+                position: relative;
+                bottom: -50px;
+
+                @media (max-width:768px) {
+                    // width: 60%;
+                    // width: 100%;
+                    height: 100%;
+                    position: relative;
+                    top: -25px;
+                    left: -35px;
+                }
+            }
+
+            .women {
+                height: 100%;
+
+                @media (max-width:768px) {
+                    width: 40%;
+                    // height: 50%;
+                }
+
+                @media (max-width:600px) {
+                    width: 250px;
+                    height: 300px;
+                    position: relative;
+                    left: -100px;
+                    object-fit: cover;
+                }
+            }
+
+        }
+    }
+
+}

@@ -1,0 +1,207 @@
+.shopping_bag {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 2rem;
+
+    @media (max-width:1024px) {
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+    }
+
+    @media (max-width:768px) {
+        overflow-x: hidden;
+        padding: 0 0.5rem;
+    }
+
+    .bag {
+        height: 80vh;
+        overflow-y: scroll;
+        width: 70%;
+        padding: 0 2rem;
+
+
+        @media (max-width:1024px) {
+            width: 100%;
+            height: fit-content;
+            padding: 0;
+            padding-top: 20vh;
+
+        }
+
+
+        @media (max-width:768px) {
+            overflow-x: hidden;
+        }
+
+
+        .bag_container {
+            // display: grid;
+            // grid-template-columns: repeat(2, 1fr);
+            // padding: 0 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding-bottom: 2rem;
+            row-gap: 1.25rem;
+            position: relative;
+
+            .bagproductprice{
+                display: flex;
+                flex-direction: column;
+                font-size: 18px;
+                gap: 1rem;                
+            }
+
+
+            @media (max-width:768px) {
+                grid-template-columns: repeat(1, 1fr);
+                width: 100%;
+
+                margin: 0;
+                padding: 1rem 0;
+
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                top: 0%;
+                right: 0%;
+                width: 5px;
+                min-height: 65vh;
+                height: 100%;
+                background-color: #000;
+
+                @media (max-width:1024px) {
+                    display: none;
+
+                }
+            }
+
+        }
+
+
+        .bag_label {
+            text-align: center;
+            position: relative;
+
+            @media (max-width:768px) {
+                font-size: 18px;
+                text-align: start;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                top: 50%;
+                left: 0%;
+                width: 35%;
+                height: 5px;
+                background-color: #000;
+
+                @media (max-width:1024px) {
+                    display: none;
+                }
+
+                @media (max-width:435px) {
+                    display: block;
+                    font-size: 18px;
+                    text-align: start;
+                    left: 45%;
+                    width: 55%;
+                    height: 2px;
+                }
+
+            }
+
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: 50%;
+                right: 0%;
+                width: 35%;
+                height: 5px;
+                background-color: #000;
+
+                @media (max-width:1024px) {
+                    display: none;
+
+                }
+            }
+        }
+    }
+
+
+    .bag_sub_label {
+        padding: 1rem 0;
+        color: #818181;
+        font-weight: 100;
+        font-size: 24px;
+
+        @media (max-width:600px) {
+            display: none;
+        }
+    }
+
+    .tip {
+        height: 80%;
+        width: 30%;
+        padding: 1rem;
+
+
+        @media (max-width:1024px) {
+            height: fit-content;
+            width: 100%;
+            padding: 0;
+        }
+
+
+        .summary {
+            border: 3px solid #ccc;
+            border-radius: 15px;
+            height: 50vh;
+            max-height: 500px;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+
+            .summary_label {
+                text-align: center;
+            }
+
+            .summary_row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0.5rem;
+                margin: 0.5rem 0;
+                width: 100%;
+
+                @media (min-width:1244px) {
+                    white-space: nowrap;
+                    gap: 0.5rem;
+                }
+                // background-color: rebeccapurple;
+            }
+        }
+    }
+
+}
+
+
+
+.bag_quantity {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    gap: 0.5rem;
+
+    input {
+        width: fit-content;
+        padding: 0.5rem 1rem;
+    }
+}

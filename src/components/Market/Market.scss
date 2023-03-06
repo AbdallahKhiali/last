@@ -1,0 +1,76 @@
+.market {
+    padding: 7.5rem 2rem 0rem 2rem;
+
+    @media (max-width:768px) {
+        padding: 0;
+        padding-top: 7rem;
+    }
+
+    .market_label {
+        text-align: center;
+        margin: 1rem;
+        padding: 1rem;
+
+
+        @media (max-width:768px) {
+            padding: 1rem 1rem 0rem 1rem;
+            margin: 1rem 0;
+            text-align: start;
+            font-family: 'Epilogue';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+        }
+    }
+
+    .market_devise {
+        text-align: start;
+        margin: 1rem 0;
+        padding: 0 2rem;
+
+        @media (max-width:768px) {
+            padding: 0.5rem 1rem;
+            margin: 0.5rem 0;
+            text-align: start;
+            font-size: 16px;
+
+        }
+    }
+
+
+
+    .market_products {
+        display: grid;
+        padding: 2rem;
+        grid-template-columns: repeat(4, minmax(300px, 1fr));
+        grid-row-gap: 2rem;
+        grid-column-gap: 2rem;
+
+        @media (max-width:768px) {
+            padding: 0.5rem;
+            gap: 0;
+            grid-row-gap: 1.5rem;
+            grid-template-columns: repeat(2, minmax(180px, 225px));
+            
+            gap: 1rem;
+
+
+        }
+
+    }
+
+
+
+
+    .pagination {
+
+        display: flex;
+        // height: 10vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        overflow-x: scroll;
+        padding: 1rem;
+    }
+
+}
