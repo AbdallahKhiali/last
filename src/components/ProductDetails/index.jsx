@@ -63,29 +63,35 @@ const ProductDetails = () => {
             _id: currentProduct._id,
             name: currentProduct.name,
             price: currentProduct.price,
-            // picture: currentProduct.picture,
             picture: currentProduct.images[0],
             size: productSize,
             quantity: productQuantity,
             colors: productColor
         }
 
-        const exist = cart.filter(element => element._id == product._id && element.size == product.size)
+        const cart = JSON.parse(localStorage.getItem('cart')) || []
+        const existingProductIndex = cart.findIndex(p => p._id === product._id);
 
-        let cartWithoutExist = cart.filter(x => !exist.includes(x))
 
-        if (exist.length > 0) {
+        if (existingProductIndex >= 0) {
+            // The product already exists in the cart
+            const existingProduct = cart[existingProductIndex];
 
-            let modifiedProduct = {
-                ...exist[0],
-                quantity: parseInt(productQuantity) + parseInt(exist[0].quantity),
+            if (existingProduct.size === product.size) {
+                // The existing product has the same size, add the quantity
+                existingProduct.quantity += product.quantity;
+                localStorage.setItem('cart', JSON.stringify(cart));
+            } else {
+                // The existing product has a different size, add it as a new product
+                cart.push(product);
+                localStorage.setItem('cart', JSON.stringify(cart));
             }
-            cartWithoutExist.push(modifiedProduct)
-            localStorage.setItem('cart', JSON.stringify(cartWithoutExist));
         } else {
+            // The product does not exist in the cart, add it
             cart.push(product);
             localStorage.setItem('cart', JSON.stringify(cart));
         }
+
     }
 
     const openModal = () => {
