@@ -883,7 +883,7 @@
 
 
         .bagslide_row {
-            padding: 1rem;
+            padding: 1rem 0.25rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -1074,6 +1074,7 @@
     border-radius: 12px;
     padding: 1rem;
     background-color: #efefef;
+    margin: 0.5rem 0;
 
 
     .btn-remove-card-bag {

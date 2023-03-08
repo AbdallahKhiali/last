@@ -15,11 +15,29 @@ const BagSlide = ({ setbagSlide }) => {
 
 
 
-    const deleteProductFromCart = (id, size) => {
+    const deleteProductFromCart = (_id, size, colors) => {
 
-        const filteredCart = cartProducts.filter(product => (product._id != id) || (product.size != size));
-        localStorage.setItem('cart', JSON.stringify(filteredCart));
-        window.location.reload();
+        // const filteredCart = cartProducts.filter(product => (product._id != id) || (product.size != size));
+        // localStorage.setItem('cart', JSON.stringify(filteredCart));
+        // window.location.reload();
+
+        // console.log(cartProducts)
+
+        const existingProductIndex = cartProducts.findIndex(
+            (item) => item._id === _id && item.size === size && item.colors === colors
+        );
+
+        // console.log(existingProductIndex)
+
+        if (existingProductIndex !== -1) {
+            const updatedCartItems = [...cartProducts];
+
+            updatedCartItems.splice(existingProductIndex, 1);
+
+            localStorage.setItem('cart', JSON.stringify(updatedCartItems));
+            window.location.reload();
+        }
+
     }
 
 
@@ -39,9 +57,9 @@ const BagSlide = ({ setbagSlide }) => {
                 <div className="bagslide_items">
 
                     {
-                        cartProducts && cartProducts?.map(({ _id, name, instock, price, quantity, size, type, picture }, i) => {
+                        cartProducts && cartProducts?.map(({ _id, name, instock, price, quantity, size, type, picture, colors }, i) => {
                             return (
-                                <MyBagCard deleteProductFromCart={() => deleteProductFromCart(_id, size)} picture={picture} key={i} id={_id} name={name} instock={instock} price={price} quantity={quantity} size={size} type={type} />
+                                <MyBagCard deleteProductFromCart={() => deleteProductFromCart(_id, size, colors)} colors={colors} picture={picture} key={i} id={_id} name={name} instock={instock} price={price} quantity={quantity} size={size} type={type} />
                             )
                         })
                     }

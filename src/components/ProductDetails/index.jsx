@@ -70,12 +70,13 @@ const ProductDetails = () => {
         }
 
         const cart = JSON.parse(localStorage.getItem('cart')) || []
-        const existingProductIndex = cart.findIndex(p => p._id === product._id);
-
+        const existingProductIndex = cart.findIndex(p => p._id === product._id && p.size === product.size && p.colors === product.colors);
 
         if (existingProductIndex >= 0) {
             // The product already exists in the cart
             const existingProduct = cart[existingProductIndex];
+            console.log('existingProduct', existingProduct.size)
+            console.log('product.size', product.size)
 
             if (existingProduct.size === product.size) {
                 // The existing product has the same size, add the quantity

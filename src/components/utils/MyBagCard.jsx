@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { GeneralContext } from '../../contexts/GeneralContext'
 import "./utils.scss"
-const MyBagCard = ({ deleteProductFromCart, name, price, quantity, type, size, id, picture }) => {
+const MyBagCard = ({ deleteProductFromCart, name, price, quantity, type, size, id, picture, colors }) => {
 
   const { baseURI } = useContext(GeneralContext)
 
@@ -18,6 +18,7 @@ const MyBagCard = ({ deleteProductFromCart, name, price, quantity, type, size, i
           <p>{type} -  <b> {price}DA </b></p>
           <hr />
           <h4>SIZE : {size}</h4>
+          <h4>COLOR : {colors}</h4>
         </div>
 
       </div>
