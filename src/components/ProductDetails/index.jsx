@@ -75,8 +75,8 @@ const ProductDetails = () => {
         if (existingProductIndex >= 0) {
             // The product already exists in the cart
             const existingProduct = cart[existingProductIndex];
-            console.log('existingProduct', existingProduct.size)
-            console.log('product.size', product.size)
+            // console.log('existingProduct', existingProduct.size)
+            // console.log('product.size', product.size)
 
             if (existingProduct.size === product.size) {
                 // The existing product has the same size, add the quantity
