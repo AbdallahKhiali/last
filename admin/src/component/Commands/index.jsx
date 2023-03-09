@@ -44,6 +44,7 @@ const Command = () => {
                         <th scope="col">USER's Name</th>
                         <th scope="col">USER's Email </th>
                         <th scope="col">User's Phone</th>
+                        <th scope="col">Commande Date</th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
@@ -52,7 +53,7 @@ const Command = () => {
 
                         // commands && commands?.map((e, i) => {
                         // console.log(e)
-                        commands && commands?.map(({ _id, commune, wilaya, adresse, lastName, firstName, phoneNumber, email, products, age, height, weight, sickness, sleepTime, wakeTime, job, timeSpentWorking, maritalStatus, blood, gender }, i) => {
+                        commands && commands?.map(({ _id, commune, wilaya, adresse, lastName, firstName, phoneNumber, email, products, age, height, weight, sickness, sleepTime, wakeTime, job, timeSpentWorking, maritalStatus, blood, gender, createdAt }, i) => {
                             // console.log({ _id, lastName, firstName, phoneNumber, email, products })
                             return (
                                 <tr key={i} >
@@ -60,8 +61,9 @@ const Command = () => {
                                     <td  >{firstName} {lastName}</td>
                                     <td  >{email}</td>
                                     <td  >{phoneNumber}</td>
+                                    <td  >{createdAt}</td>
                                     <td  >
-                                        <button type="button" className="btn btn-info mx-1" onClick={() => { setCommandDetails({ _id, commune, wilaya, adresse, lastName, firstName, phoneNumber, email, products, age, height, weight, sickness, sleepTime, wakeTime, job, timeSpentWorking, maritalStatus, blood, gender }); setModal(true) }}>details</button>
+                                        <button type="button" className="btn btn-info mx-1" onClick={() => { setCommandDetails({ _id, commune, wilaya, adresse, lastName, firstName, phoneNumber, email, products, age, height, weight, sickness, sleepTime, wakeTime, job, timeSpentWorking, maritalStatus, blood, gender, createdAt }); setModal(true) }}>details</button>
                                         <button type="button" className="btn btn-danger mx-1" onClick={() => deletecommand(_id)}  >delete</button>
                                     </td>
                                 </tr>

@@ -3,7 +3,7 @@ import "./modal.scss"
 const ModalCommand = ({ commandsDetails, setModal }) => {
     const baseURI = "http://localhost:3004/api/v1"
 
-    const { _id, commune, wilaya, adresse, lastName, firstName, phoneNumber, email, products, age, height, weight, sickness, sleepTime, wakeTime, job, timeSpentWorking, maritalStatus, blood, gender } = commandsDetails
+    const { _id, commune, wilaya, adresse, lastName, firstName, phoneNumber, email, products, age, height, weight, sickness, sleepTime, wakeTime, job, timeSpentWorking, maritalStatus, blood, gender, createdAt } = commandsDetails
     // console.log(commandsDetails)
 
     return (
@@ -20,6 +20,10 @@ const ModalCommand = ({ commandsDetails, setModal }) => {
                     <p className='my-3 py-3 bg-dark text-white p-3 ' >USER Informations</p>
                     <div className="row  col-md-6">
 
+                        <div >
+                            <b>Commannde Date : </b>
+                            <p> {createdAt} </p>
+                        </div>
                         <div >
                             <b>Nom et prenom : </b>
                             <p> {firstName} {lastName} </p>

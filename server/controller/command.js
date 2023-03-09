@@ -12,28 +12,29 @@ const createcommand = async (req, res) => {
     // console.log(products)
     // console.log(req.body)
     const { lastName, firstName, phoneNumber, email, adresse, commune, wilaya, blood, weight, height, job, maritalStatus, sleepTime, wakeTime, age, gender } = req.body
-        let command = new commandModel({
-            lastName: lastName,
-            firstName: firstName,
-            phoneNumber: phoneNumber,
-            email: email,
-            adresse: adresse,
-            commune: commune,
-            wilaya: wilaya,
-            maritalStatus: maritalStatus,
-            job: job,
-            wakeTime: wakeTime,
-            sleepTime: sleepTime,
-            blood: blood,
-            gender: gender,
-            age: age,
-            weight: weight,
-            height: height,
-            products: [...products],
-        })
-        command.save().then(command => res.json({ message: 'command added successfully', command })).catch(err => res.json(err))
+    let command = new commandModel({
+        lastName: lastName,
+        firstName: firstName,
+        phoneNumber: phoneNumber,
+        email: email,
+        adresse: adresse,
+        commune: commune,
+        wilaya: wilaya,
+        maritalStatus: maritalStatus,
+        job: job,
+        wakeTime: wakeTime,
+        sleepTime: sleepTime,
+        blood: blood,
+        gender: gender,
+        age: age,
+        weight: weight,
+        height: height,
+        products: [...products],
+        createdAt: new Date()
+    })
+    command.save().then(command => res.json({ message: 'command added successfully', command })).catch(err => res.json(err))
 
-        // console.log(req.body)
+    // console.log(req.body)
     // console.log(products)
 
     // console.log({ _id, lastname, firstname, phoneNumber, email, products })

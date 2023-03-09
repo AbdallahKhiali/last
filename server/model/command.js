@@ -21,8 +21,7 @@ const commandSchema = new Schema({
     wilaya: String,
     commune: String,
     products: [],
-    
-
+    createdAt: Date,
 })
 const commandModel = mongoose.model('commands', commandSchema)
 
